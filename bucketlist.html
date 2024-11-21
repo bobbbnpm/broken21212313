@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bucket List</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="swap.html">Swapping</a></li>
+      <li><a href="bucketlist.html">My Bucket List</a></li>
+      <li><a href="profile.html">My Profile</a></li>
+    </ul>
+  </nav>
+
+  <main class="bucketlist-page">
+    <h1>My Bucket List</h1>
+
+    <!-- Samostatné tlačítka pro Completed a Priority -->
+    <div class="status-button-container">
+      <button id="completed-button">Completed</button>
+      <button id="priority-button">Priority</button>
+    </div>
+
+    <!-- Filtr pro výběr kategorie -->
+    <div class="filter-container">
+      <label for="category-filter">Filter by category:</label>
+      <select id="category-filter">
+        <option value="all">All</option>
+        <option value="movie">Movies</option>
+        <option value="homework">TV Shows</option>
+        <option value="sport">Games</option>
+        <option value="books">Books</option>
+        <option value="travel">Travel</option>
+        <option value="food">Food</option>
+        <option value="life">Life</option>
+        <option value="your">Your</option>
+      </select>
+    </div>
+
+    <div class="bucketlist-container" id="bucketlist-container">
+      <!-- Příklad položek z různých kategorií -->
+      <div class="bucketlist-item" data-category="movie" data-status="incomplete">
+        <span>Marathon of The Lord of the Rings</span>
+        <button class="complete-btn">Mark as Completed</button>
+        <button class="priority-btn">Set as Priority</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+      <!-- Další položky podle potřeby -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

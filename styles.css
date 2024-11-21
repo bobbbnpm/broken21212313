@@ -1,0 +1,419 @@
+/* Nastavení pozadí celé stránky */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFBF69;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigace */
+nav {
+  background-color: #f58a07;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+/* Změna písma na pixelové */
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #FFBF69;
+}
+
+/* Hlavní obsah */
+main.home {
+  padding-top: 70px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+}
+
+h2 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+}
+
+p {
+  font-size: 20px;
+  color: #555;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+}
+
+.logo {
+  margin-top: 20px;
+  width: 150px;
+}
+
+/* Hlavní obsah (Categories) */
+main.categories {
+  padding-top: 70px;  /* Aby obsah nezačínal pod menu */
+  text-align: center;
+  display: flex;  /* Flexbox pro zarovnání */
+  flex-wrap: wrap;  /* Aby se kategorie přetáčely na další řádky, pokud je prostor omezený */
+  justify-content: center;  /* Zarovnání do středu */
+  gap: 30px;  /* Mezera mezi bublinami */
+}
+
+/* Každá kategorie */
+.category {
+  background-color: #f58a07;  /* Barva bubliny */
+  color: white;
+  padding: 30px;
+  width: 200px;  /* Velikost bubliny */
+  height: 200px;  /* Velikost bubliny */
+  border-radius: 50%;  /* Kulatý tvar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Efekt při hoveru */
+}
+
+.category:hover {
+  background-color: #FFBF69;  /* Barva při hoveru */
+  transform: scale(1.1);  /* Zvětšení bubliny */
+}
+
+.category h2 {
+  font-size: 22px;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  margin-bottom: 10px;
+}
+
+.category-link {
+  text-decoration: none;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  padding: 5px 15px;
+  background-color: #000000;
+  border-radius: 20px;  /* Zaoblení tlačítka */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-link:hover {
+  background-color: #FFBF69;
+  color: #333;
+}
+
+/* Swap stránka */
+main.swap {
+  padding-top: 70px;  /* Aby obsah nezačínal pod menu */
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+}
+
+/* Karta výzvy */
+.challenge-card {
+  background-color: #f58a07;
+  color: white;
+  padding: 30px;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-card p {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+}
+
+.save-btn,
+.next-btn {
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.save-btn {
+  background-color: #00cc66;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #009933;
+}
+
+.next-btn {
+  background-color: #ff6666;
+  color: white;
+}
+
+.next-btn:hover {
+  background-color: #cc3333;
+}
+
+
+/* Nastavení pozadí celé stránky */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFBF69;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+
+/* Úpravy pro hlavní stránku My Bucket List */
+.bucketlist-page {
+  background-color: #FFBF69;  /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px;  /* Aby obsah nezačínal pod menu */
+  text-align: center;
+}
+
+/* Titulek na stránce */
+.bucketlist-page h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  margin-bottom: 20px;  /* Mezera mezi nadpisem a filtrem */
+}
+
+/* Styl pro filtr kategorie */
+.filter-container {
+  margin-bottom: 30px;
+}
+
+.filter-container label {
+  font-size: 18px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;
+  margin-right: 10px;
+}
+
+#category-filter {
+  font-size: 16px;
+  padding: 5px;
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 20px;
+  border: 2px solid #333;
+  background-color: #f58a07;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#category-filter:hover {
+  background-color: #FFBF69;
+}
+
+/* Kontainer pro položky v bucketlistu */
+.bucketlist-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styl pro jednotlivé položky */
+.bucketlist-item {
+  background-color: #f58a07;  /* Barva pozadí položky */
+  color: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;  /* Kulaté rohy pro obdélníkové boxy */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 2px solid #333;
+}
+
+/* Efekt při hoveru */
+.bucketlist-item:hover {
+  transform: scale(1.05);  /* Trochu zvětšení */
+  background-color: #FFBF69;
+}
+
+/* Styl pro text v položce */
+.bucketlist-item span {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Tlačítka na položkách */
+.bucketlist-item button {
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bucketlist-item button:hover {
+  background-color: #FFBF69;
+}
+
+/* Styl pro tlačítka Completed a Priority */
+.status-button-container {
+  margin-bottom: 30px;  /* Mezera mezi tlačítky a ostatním obsahem */
+  text-align: center;  /* Zarovnání tlačítek na střed */
+}
+
+.status-button-container button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  padding: 10px 20px;  /* Větší mezery pro lepší vzhled */
+  margin: 0 10px;  /* Mezera mezi tlačítky */
+  background-color: #333;  /* Tmavá barva pozadí tlačítka */
+  color: white;
+  border: none;
+  border-radius: 20px;  /* Oválný tvar tlačítka */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Přidáme animaci pro transformaci */
+}
+
+/* Efekt při hoveru pro tlačítka */
+.status-button-container button:hover {
+  transform: scale(1.1);  /* Zvětšení tlačítka při hoveru */
+}
+
+
+
+
+
+/* Úpravy pro hlavní stránku Movies */
+.movies {
+  background-color: #FFBF69;  /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px;  /* Aby obsah nezačínal pod menu */
+  text-align: center;
+}
+
+/* Titulek na stránce */
+.movies h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  margin-bottom: 20px;  /* Mezera mezi nadpisem a filtrem */
+}
+
+/* Kontainer pro položky v bucketlistu */
+.bucketlist-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styl pro jednotlivé položky */
+.bucketlist-item {
+  background-color: #f58a07;  /* Barva pozadí položky */
+  color: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;  /* Kulaté rohy pro obdélníkové boxy */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 2px solid #333;
+}
+
+/* Efekt při hoveru */
+.bucketlist-item:hover {
+  transform: scale(1.05);  /* Trochu zvětšení */
+  background-color: #FFBF69;
+}
+
+/* Styl pro text v položce */
+.bucketlist-item span {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Tlačítka na položkách */
+.bucketlist-item button {
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bucketlist-item button:hover {
+  background-color: #FFBF69;
+}
+
+/* Styl pro tlačítka Save a X */
+.save-btn, .X-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  padding: 10px 20px;  /* Větší mezery pro lepší vzhled */
+  margin: 0 10px;  /* Mezera mezi tlačítky */
+  background-color: #333;  /* Tmavá barva pozadí tlačítka */
+  color: white;
+  border: none;
+  border-radius: 20px;  /* Oválný tvar tlačítka */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Přidáme animaci pro transformaci */
+}
+
+/* Efekt při hoveru pro tlačítka */
+.save-btn:hover, .X-btn:hover {
+  background-color: #FFBF69;
+  transform: scale(1.1);  /* Zvětšení tlačítka při hoveru */
+}
+
+
+
+
