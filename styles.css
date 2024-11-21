@@ -538,6 +538,11 @@ body {
   margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
 
+.profile-container {
+  padding-top: 70px; /* Aby obsah nezačínal pod menu */
+  text-align: center;
+}
+
 
 
 
