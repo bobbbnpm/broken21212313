@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFBF69;
+  background-color: #ffbb94;
   font-family: Arial, sans-serif;
 }
 
@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #FFBF69;
+  color: #000000;
 }
 
 /* Hlavní obsah */
@@ -193,6 +193,77 @@ body {
 }
 
 
+/* Formulář */ 
+/* Feedback Form Styles */
+.feedback-form {
+  background-color: #f58a07;
+  color: white;
+  padding: 30px;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-form h2 {
+  font-size: 36px;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  margin-bottom: 20px;
+}
+
+.feedback-form label {
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  display: block;
+  margin-top: 15px;
+}
+
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid #333;
+  background-color: #fff;
+  color: #333;
+}
+
+.feedback-input:focus,
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #FFBF69;
+}
+
+.feedback-textarea {
+  resize: vertical;
+}
+
+.feedback-button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-button:hover {
+  background-color: #FFBF69;
+  transform: scale(1.05);
+}
+
+
+
 
 
 
@@ -338,81 +409,126 @@ body {
   margin-bottom: 20px;  /* Mezera mezi nadpisem a filtrem */
 }
 
-/* Kontainer pro položky v bucketlistu */
-.bucketlist-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-}
 
-/* Styl pro jednotlivé položky */
-.bucketlist-item {
-  background-color: #f58a07;  /* Barva pozadí položky */
-  color: white;
-  padding: 20px;
-  width: 250px;
-  border-radius: 15px;  /* Kulaté rohy pro obdélníkové boxy */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+
+
+/* Úpravy pro hlavní stránku TV Shows */
+.tvshows {
+  background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px; /* Aby obsah nezačínal pod menu */
   text-align: center;
-  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
-  font-size: 18px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  border: 2px solid #333;
 }
 
-/* Efekt při hoveru */
-.bucketlist-item:hover {
-  transform: scale(1.05);  /* Trochu zvětšení */
-  background-color: #FFBF69;
+/* Titulek na stránce */
+.tvshows h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
 
-/* Styl pro text v položce */
-.bucketlist-item span {
-  font-size: 18px;
-  margin-bottom: 10px;
+
+
+
+
+/* Úpravy pro hlavní stránku Games */
+.games {
+  background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px; /* Aby obsah nezačínal pod menu */
+  text-align: center;
 }
 
-/* Tlačítka na položkách */
-.bucketlist-item button {
-  margin-top: 10px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-family: 'Press Start 2P', cursive;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Titulek na stránce */
+.games h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
 
-.bucketlist-item button:hover {
-  background-color: #FFBF69;
+
+
+
+/* Úpravy pro hlavní stránku Books */
+.books {
+  background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px; /* Aby obsah nezačínal pod menu */
+  text-align: center;
 }
 
-/* Styl pro tlačítka Save a X */
-.save-btn, .X-btn {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
-  padding: 10px 20px;  /* Větší mezery pro lepší vzhled */
-  margin: 0 10px;  /* Mezera mezi tlačítky */
-  background-color: #333;  /* Tmavá barva pozadí tlačítka */
-  color: white;
-  border: none;
-  border-radius: 20px;  /* Oválný tvar tlačítka */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;  /* Přidáme animaci pro transformaci */
+/* Titulek na stránce */
+.books h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
 
-/* Efekt při hoveru pro tlačítka */
-.save-btn:hover, .X-btn:hover {
-  background-color: #FFBF69;
-  transform: scale(1.1);  /* Zvětšení tlačítka při hoveru */
+
+
+
+
+
+/* Úpravy pro hlavní stránku Travel */
+.travel {
+  background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px; /* Aby obsah nezačínal pod menu */
+  text-align: center;
 }
+
+/* Titulek na stránce */
+.travel h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
+}
+
+
+
+
+
+
+
+
+
+/* Úpravy pro hlavní stránku Food */
+.food {
+  background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px; /* Aby obsah nezačínal pod menu */
+  text-align: center;
+}
+
+/* Titulek na stránce */
+.food h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
+}
+
+
+
+
+
+/* Úpravy pro hlavní stránku Life */
+.life {
+  background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
+  padding-top: 70px; /* Aby obsah nezačínal pod menu */
+  text-align: center;
+}
+
+/* Titulek na stránce */
+.life h1 {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
+  margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
+}
+
+
+
 
 
 
