@@ -390,8 +390,19 @@ body {
   transform: scale(1.1);  /* Zvětšení tlačítka při hoveru */
 }
 
-
-
+/* Reset saved Button */ 
+#reset-button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  padding: 10px 20px;  /* Větší mezery pro lepší vzhled */
+  margin: 0 10px;  /* Mezera mezi tlačítky */
+  background-color: #333;  /* Tmavá barva pozadí tlačítka */
+  color: white;
+  border: none;
+  border-radius: 20px;  /* Oválný tvar tlačítka */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
 
 /* Úpravy pro hlavní stránku Movies */
