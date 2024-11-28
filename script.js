@@ -198,6 +198,100 @@ nextButton.addEventListener("click", () => {
   saveButton.textContent = "Save"; // Resetuje tlačítko na "Save" po změně aktivity
 });
 
+const board = document.getElementById('game-board');
+
+const gameSize = 20;
+let snake = [{ x: 10, y: 10 }];
+let direction = { x: 0, y: 0 };
+let food = generateFood();
+let speed = 200;
+let gameInterval;
+
+function startGame() {
+  drawBoard();
+  placeFood();
+  gameInterval = setInterval(updateGame, speed);
+}
+
+function drawBoard() {
+  board.innerHTML = '';
+  snake.forEach(segment => {
+    const snakeElement = document.createElement('div');
+    snakeElement.style.gridRowStart = segment.y;
+    snakeElement.style.gridColumnStart = segment.x;
+    snakeElement.classList.add('snake');
+    board.appendChild(snakeElement);
+  });
+}
+
+function updateGame() {
+  const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+
+  if (isCollision(head)) {
+    clearInterval(gameInterval);
+    alert('Game Over! Refresh to play again.');
+    return;
+  }
+
+  if (head.x === food.x && head.y === food.y) {
+    snake.push({ ...food });
+    food = generateFood();
+    placeFood();
+  } else {
+    snake.pop();
+  }
+
+  snake.unshift(head);
+  drawBoard();
+}
+
+function isCollision(head) {
+  return (
+    head.x < 1 ||
+    head.x > gameSize ||
+    head.y < 1 ||
+    head.y > gameSize ||
+    snake.some(segment => segment.x === head.x && segment.y === head.y)
+  );
+}
+
+function generateFood() {
+  let newFoodPosition;
+  while (!newFoodPosition || snake.some(segment => segment.x === newFoodPosition.x && segment.y === newFoodPosition.y)) {
+    newFoodPosition = {
+      x: Math.floor(Math.random() * gameSize) + 1,
+      y: Math.floor(Math.random() * gameSize) + 1
+    };
+  }
+  return newFoodPosition;
+}
+
+function placeFood() {
+  const foodElement = document.createElement('div');
+  foodElement.style.gridRowStart = food.y;
+  foodElement.style.gridColumnStart = food.x;
+  foodElement.classList.add('food');
+  board.appendChild(foodElement);
+}
+
+document.addEventListener('keydown', event => {
+  switch (event.key) {
+    case 'ArrowUp':
+      if (direction.y !== 1) direction = { x: 0, y: -1 };
+      break;
+    case 'ArrowDown':
+      if (direction.y !== -1) direction = { x: 0, y: 1 };
+      break;
+    case 'ArrowLeft':
+      if (direction.x !== 1) direction = { x: -1, y: 0 };
+      break;
+    case 'ArrowRight':
+      if (direction.x !== -1) direction = { x: 1, y: 0 };
+      break;
+  }
+});
+
+startGame();
 
 
 

@@ -607,3 +607,31 @@ nav select {
     color: black;
   }
 }
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-board {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #000;
+  border: 2px solid #f58a07;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.snake {
+  background-color: #00ff00;
+  border: 1px solid #004400;
+}
+
+.food {
+  background-color: #ff0000;
+  border: 1px solid #550000;
+}
+
