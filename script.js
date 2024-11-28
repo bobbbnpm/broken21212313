@@ -155,7 +155,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+<<<<<<< Updated upstream
 // SWIPPING
+=======
+// SWIPPING 
+>>>>>>> Stashed changes
 // Seznam aktivit
 const activities = [
   "The Day of the Triffids",
