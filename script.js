@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+// SWIPPING
 // Seznam aktivit
 const activities = [
   "The Day of the Triffids",
@@ -170,33 +170,39 @@ const activities = [
   "Try authentic sushi in Japan"
 ];
 
-// Počáteční index pro aktivity
-let currentActivityIndex = 0;
-
 // Získání elementů
 const challengeText = document.getElementById("challenge-text");
 const saveButton = document.querySelector(".save-btn");
 const nextButton = document.querySelector(".next-btn");
 
-// Funkce pro změnu aktivity
+// Funkce pro vygenerování náhodného indexu
+function getRandomIndex() {
+  return Math.floor(Math.random() * activities.length);
+}
+
+// Funkce pro změnu aktivity na náhodnou
 function changeActivity() {
-  currentActivityIndex = (currentActivityIndex + 1) % activities.length;
-  challengeText.textContent = activities[currentActivityIndex];
-  saveButton.textContent = "Save";  // Po změně aktivit resetuj tlačítko na "Save"
+  let newActivityIndex;
+  do {
+    newActivityIndex = getRandomIndex();
+  } while (activities[newActivityIndex] === challengeText.textContent); // Zajištění, že se nebude opakovat stejná aktivita
+
+  challengeText.textContent = activities[newActivityIndex];
+  saveButton.textContent = "Save"; // Po změně aktivity resetuj tlačítko na "Save"
 }
 
 // Funkce pro zobrazení "Saved" po kliknutí na Save
 saveButton.addEventListener("click", () => {
   if (saveButton.textContent !== "Saved") {
-    saveButton.textContent = "Saved";  // Změní text tlačítka na "Saved"
+    saveButton.textContent = "Saved"; // Změní text tlačítka na "Saved"
   }
 });
 
 // Funkce pro přechod na další aktivitu po kliknutí na Skip
 nextButton.addEventListener("click", () => {
   changeActivity(); // Změní aktivitu
-  saveButton.textContent = "Save"; // Resetuje tlačítko na "Save" po změně aktivity
 });
+
 
 
 
