@@ -71,6 +71,46 @@ p {
   width: 150px;
 }
 
+/* Save Button */ 
+.bucketlist-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.input-field {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  max-width: 400px;
+  border: 2px solid #f58a07;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.input-field::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #f58a07;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.save-button:hover {
+  background-color: #ffbf69;
+}
+
+
 /* Hlavní obsah (Categories) */
 main.categories {
   padding-top: 70px;  /* Aby obsah nezačínal pod menu */
@@ -520,9 +560,6 @@ body {
 }
 
 
-
-
-
 /* Úpravy pro hlavní stránku Life */
 .life {
   background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
@@ -542,6 +579,35 @@ body {
   padding-top: 70px; /* Aby obsah nezačínal pod menu */
   text-align: center;
 }
+
+/* Footer */
+.footer {
+  background-color: #f58a07;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: white;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.social-icon:hover {
+  color: #FFBF69;
+}
+
 
 
 
