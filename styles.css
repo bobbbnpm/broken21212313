@@ -302,11 +302,6 @@ body {
   transform: scale(1.05);
 }
 
-
-
-
-
-
 /* Úpravy pro hlavní stránku My Bucket List */
 .bucketlist-page {
   background-color: #FFBF69;  /* Stejná barva pozadí jako na ostatních stránkách */
@@ -460,10 +455,6 @@ body {
   margin-bottom: 20px;  /* Mezera mezi nadpisem a filtrem */
 }
 
-
-
-
-
 /* Úpravy pro hlavní stránku TV Shows */
 .tvshows {
   background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
@@ -478,10 +469,6 @@ body {
   font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
   margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
-
-
-
-
 
 /* Úpravy pro hlavní stránku Games */
 .games {
@@ -498,9 +485,6 @@ body {
   margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
 
-
-
-
 /* Úpravy pro hlavní stránku Books */
 .books {
   background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
@@ -515,11 +499,6 @@ body {
   font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
   margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
-
-
-
-
-
 
 /* Úpravy pro hlavní stránku Travel */
 .travel {
@@ -536,14 +515,6 @@ body {
   margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
 
-
-
-
-
-
-
-
-
 /* Úpravy pro hlavní stránku Food */
 .food {
   background-color: #FFBF69; /* Stejná barva pozadí jako na ostatních stránkách */
@@ -558,7 +529,6 @@ body {
   font-family: 'Press Start 2P', cursive; /* Pixelové písmo */
   margin-bottom: 20px; /* Mezera mezi nadpisem a filtrem */
 }
-
 
 /* Úpravy pro hlavní stránku Life */
 .life {
@@ -607,11 +577,4 @@ body {
 .social-icon:hover {
   color: #FFBF69;
 }
-
-
-
-
-
-
-
 
