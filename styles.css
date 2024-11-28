@@ -578,145 +578,32 @@ body {
   color: #FFBF69;
 }
 
-/* Responsivní styly */
-@media (max-width: 1200px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+/*responzivita webu*/
 
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .category {
-    width: 180px;
-    height: 180px;
-  }
-
-  .category h2 {
-    font-size: 20px;
-  }
-
-  .category-link {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 992px) {
-  .input-field {
-    width: 80%;
-  }
-
-  .feedback-form {
-    width: 90%;
-  }
-
-  .challenge-card {
-    width: 90%;
-  }
-
-  .bucketlist-item {
-    width: 200px;
-  }
+/* Zmenšení okna */
+nav select {
+  display: none;
 }
 
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    display: none;
   }
 
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  h1, h2 {
-    font-size: 28px;
-  }
-
-  p {
+  nav select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
     font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #f58a07;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
   }
 
-  .category {
-    width: 150px;
-    height: 150px;
-  }
-
-  .category h2 {
-    font-size: 18px;
-  }
-
-  .input-field {
-    font-size: 14px;
-  }
-
-  .save-button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-
-@media (max-width: 576px) {
-  .category {
-    width: 120px;
-    height: 120px;
-  }
-
-  .category h2 {
-    font-size: 16px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  .feedback-form {
-    padding: 20px;
-  }
-
-  .challenge-card {
-    padding: 20px;
-  }
-
-  .bucketlist-item {
-    width: 180px;
-  }
-
-  .bucketlist-page h1,
-  .movies h1,
-  .tvshows h1,
-  .games h1,
-  .books h1,
-  .travel h1,
-  .food h1,
-  .life h1 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 375px) {
-  .input-field {
-    width: 100%;
-  }
-
-  .save-button {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-
-  .category {
-    width: 100px;
-    height: 100px;
-  }
-
-  .category h2 {
-    font-size: 14px;
+  nav select option {
+    background-color: white;
+    color: black;
   }
 }
