@@ -203,6 +203,29 @@ nextButton.addEventListener("click", () => {
   changeActivity(); // Změní aktivitu
 });
 
+// INDEX.HTML BEFORE I DIE, I WANT TO... SAVE
+document.addEventListener("DOMContentLoaded", function() {
+  const saveButton = document.getElementById("save-item");
+
+  saveButton.addEventListener("click", function() {
+    saveButton.innerText = "Saved"; // Změní text tlačítka
+    saveButton.disabled = true;    // Volitelné: zneaktivní tlačítko
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
 
 
 
