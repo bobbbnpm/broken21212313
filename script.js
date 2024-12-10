@@ -213,6 +213,18 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// Importujte knihovnu, pokud používáte npm
+// import posthog from 'posthog-js';
+
+// Inicializace PostHogu
+posthog.init('YOUR_API_KEY', {
+    api_host: 'https://app.posthog.com', // Nebo váš vlastní server
+    persistence: 'cookie', // Sleduje uživatele pomocí cookies
+});
+
+// Kontrola, zda je knihovna správně načtena
+posthog.capture('Page loaded');
+
 
 
 
