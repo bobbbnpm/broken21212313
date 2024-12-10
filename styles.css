@@ -39,12 +39,11 @@ nav ul li {
   /*position: relative;  Umožňuje vložení rozbalovacího obsahu */
 }
 
-/* Změna písma na pixelové */
 nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
-  font-family: 'Press Start 2P', cursive;  /* Pixelové písmo */
+  font-family: 'Press Start 2P', cursive; 
   display: inline-block;
   padding: 10px 20px;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -53,17 +52,17 @@ nav ul li a {
 nav ul li a:hover {
   color: #000000;
   border-radius: 5px;
-  background-color: #ffbf69; /* Barva na hover */
-  transform: scale(1.1); /* Mírné zvětšení při najetí myší */
+  background-color: #ffbf69; 
+  transform: scale(1.1); 
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a.active {
-  background-color: #ffbf69; /* Barva pozadí pro aktivní odkaz */
-  color: white; /* Barva textu */
+  background-color: #ffbf69; 
+  color: white; 
   font-weight: bold;
-  border-radius: 5px; /* Zaoblení rohu */
-  text-decoration: none; /* Odstranění podtržení */
+  border-radius: 5px;
+  text-decoration: none; 
 }
 
 h1 {
@@ -598,28 +597,52 @@ nav select {
   display: none;
 }
 
+.menu-toggle {
+  display: none; 
+}
+
+/* Skryj hlavní menu na menších obrazovkách a použij ikonu */
 @media (max-width: 768px) {
   nav ul {
     display: none;
+    flex-direction: column; /* Přepnutí na vertikální uspořádání */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #f58a07;
+    z-index: 1000;
+    border-top: 2px solid #ffbf69;
   }
 
-  nav select {
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    padding: 15px 20px;
     display: block;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #333;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px 20px;
     background-color: #f58a07;
     color: white;
+    font-size: 18px;
     font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    border: none;
+    outline: none;
   }
 
-  nav select option {
-    background-color: white;
-    color: black;
+  nav ul.show {
+    display: flex; /* Zobrazení menu při aktivaci */
   }
 }
+
 
 .profile-container {
   padding-top: 70px;

@@ -14,6 +14,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav ul");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("show"); // Přepínání třídy pro zobrazení/skrytí menu
+  });
+
   // localStorage
   const savedItems = JSON.parse(localStorage.getItem("savedItems")) || [];
 
@@ -109,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  
 
   // Reset všech filtrů
   resetButton.addEventListener('click', function () {
