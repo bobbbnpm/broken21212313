@@ -213,18 +213,24 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Importujte knihovnu, pokud používáte npm
-// import posthog from 'posthog-js';
+import posthog from 'posthog-js';
 
-// Inicializace PostHogu
-posthog.init('YOUR_API_KEY', {
-    api_host: 'https://app.posthog.com', // Nebo váš vlastní server
-    persistence: 'cookie', // Sleduje uživatele pomocí cookies
+posthog.init('phc_fPx1fqQNE1FRolgQ1xM4RyvXBZSmt51gxFT5CW27OMr', {
+    api_host: 'https://eu.i.posthog.com',
+    person_profiles: 'identified_only', // nebo 'always' pro anonymní uživatele
 });
 
-// Kontrola, zda je knihovna správně načtena
-posthog.capture('Page loaded');
-
+posthog.onFeatureFlags(function () {
+    if (posthog.isFeatureEnabled('my-flag')) {
+        console.log('Feature flag is enabled!');
+        // Implementujte logiku pro povolenou funkci
+        document.body.style.backgroundColor = '#f0f0f0'; // Například změna pozadí
+    } else {
+        console.log('Feature flag is disabled!');
+        // Implementujte logiku pro vypnutou funkci
+        document.body.style.backgroundColor = '#ffffff';
+    }
+});
 
 
 
