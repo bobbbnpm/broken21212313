@@ -1,6 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
   const bucketListContainer = document.getElementById("bucketlist-container");
 
+  const navLinks = document.querySelectorAll("nav a");
+  const currentUrl = window.location.href;
+
+  navLinks.forEach(link => {
+    if (link.href === currentUrl) {
+      link.classList.add("active"); // Označení aktuální stránky
+      const parent = link.closest(".dropdown"); // Kontrola, zda je odkaz v dropdown menu
+      if (parent) {
+        parent.querySelector(".dropbtn").classList.add("active"); // Označení nadřazené položky
+      }
+    }
+  });
+
   // localStorage
   const savedItems = JSON.parse(localStorage.getItem("savedItems")) || [];
 
@@ -195,29 +208,17 @@ function changeActivity() {
 saveButton.addEventListener("click", () => {
   if (saveButton.textContent !== "Saved") {
     saveButton.textContent = "Saved"; // Změní text tlačítka na "Saved"
+    saveButton.disabled = true;
   }
 });
+
+
+
 
 // Funkce pro přechod na další aktivitu po kliknutí na Skip
 nextButton.addEventListener("click", () => {
   changeActivity(); // Změní aktivitu
 });
-
-// INDEX.HTML BEFORE I DIE, I WANT TO... SAVE
-document.addEventListener("DOMContentLoaded", function() {
-  const saveitemButton = document.getElementById("save-item");
-
-  saveitemButton.addEventListener("click", function() {
-    saveitemButton.innerText = "Saved"; // Změní text tlačítka
-    saveitemButton.disabled = true;    // Volitelné: zneaktivní tlačítko
-  });
-});
-
-
-
-
-
-
 
 
 

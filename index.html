@@ -17,14 +17,26 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="categories.html">Categories</a></li>
+      <li class="dropdown">
+        <a href="categories.html" class="dropbtn">Categories</a>
+        <div class="dropdown-content">
+          <a href="movie.html">Movies</a>
+          <a href="tvshows.html">TV Shows</a>
+          <a href="games.html">Games</a>
+          <a href="books.html">Books</a>
+          <a href="travel.html">Travel</a>
+          <a href="food.html">Food</a>
+          <a href="life.html">Life</a>
+          <a href="myidea.html">Your Ideas</a>
+        </div>
+      </li>
       <li><a href="swap.html">Swipping</a></li>
       <li><a href="bucketlist.html">My Bucket List</a></li>
       <li><a href="profile.html">My Profile</a></li>
     </ul>
     <select onchange="location = this.value;">
       <option value="index.html">Home</option>
-      <option value="categories.html">Categories</option>
+      <option value="categories.html" selected>Categories</option>
       <option value="swap.html">Swipping</option>
       <option value="bucketlist.html">My Bucket List</option>
       <option value="profile.html">My Profile</option>
@@ -40,7 +52,7 @@
 
     <div class="bucketlist-input">
       <input type="text" id="bucketlist-item" placeholder="Before I Die, I Want to..." class="input-field">
-      <button id="save-item" class="save-button">Save</button>
+      <button class="save-btn">Save</button>
     </div>
     <p>
       Discover a world full of inspiration and endless possibilities! Bucket List is your go-to place to explore new experiences, fulfill your dreams, and create a personalized list of things to achieve. From adventurous <a href="travel.html">travels</a> to cozy evenings with a <a href="books.html">book</a> — everything is here.
